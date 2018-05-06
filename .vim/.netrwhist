@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Applications/MAMP/htdocs/dzoks.rs/ui'
+let g:netrw_dirhist_2='/Users/Lazar/Desktop/xakatonMAT2018'
+let g:netrw_dirhist_3='/Users/Lazar/.vimbackup'
+let g:netrw_dirhist_4='/Users/Lazar'

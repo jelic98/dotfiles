@@ -1,0 +1,14 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = Lazar Jelic
+#	email = jelic.ecloga@gmail.com 
+[user]
+	name = jelic98
+	email = jelic.ecloga@gmail.com
+[core]
+	editor = vim
+[diff]
+	tool = vimdiff
+[mergetool]
+	keepBackup = false
