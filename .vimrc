@@ -6,8 +6,11 @@
 " 	https://github.com/jelic98
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-colorscheme mirodark
+colorscheme PaperColor
+set t_Co=256
+set background=dark
 set number
+set laststatus=2
 set tabstop=4
 set autoindent
 set smarttab
@@ -47,14 +50,23 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 function GvrVimDiff()
-set guifont=Andale_Mono:h8:w4.5 columns=165
-wincmd =
+	set guifont=Andale_Mono:h8:w4.5 columns=165
 endfun
 
 function GvrVimUnDiff()
-set guifont=Bitstream_Vera_Sans_Mono:h10 columns=80
+	set guifont=Bitstream_Vera_Sans_Mono:h10 columns=80
 endfun
 
 if &diff
 	call GvrVimDiff()
-	endif
+endif
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+		    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+	Plug 'dart-lang/dart-vim-plugin'
+call plug#end()
