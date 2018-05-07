@@ -69,4 +69,5 @@ endif
 
 call plug#begin()
 	Plug 'dart-lang/dart-vim-plugin'
+	Plug 'terryma/vim-multiple-cursors'
 call plug#end()
