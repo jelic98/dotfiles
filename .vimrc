@@ -42,12 +42,20 @@ set whichwrap+=<,>,h,l
 set pastetoggle=<F3>
 let mapleader="/"
 let g:netrw_liststyle=3
+let g:web_search_command = "open"
+let g:web_search_query = "https://www.google.com/search?q="
 map <leader>w :w<Enter>
 nnoremap <NUL> :E<Enter> 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <C-T> :NERDTreeToggle<CR>
+nnoremap <C-W> :WebSearchCursor<CR>
+vnoremap <C-W> :WebSearchVisual<CR>
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 function GvrVimDiff()
 	set guifont=Andale_Mono:h8:w4.5 columns=165
@@ -70,5 +78,7 @@ endif
 call plug#begin()
 	Plug 'dart-lang/dart-vim-plugin'
 	Plug 'terryma/vim-multiple-cursors'
+	Plug 'linluk/vim-websearch'
 	Plug 'Valloric/YouCompleteMe'
+	Plug 'scrooloose/nerdtree'
 call plug#end()
