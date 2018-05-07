@@ -70,4 +70,5 @@ endif
 call plug#begin()
 	Plug 'dart-lang/dart-vim-plugin'
 	Plug 'terryma/vim-multiple-cursors'
+	Plug 'Valloric/YouCompleteMe'
 call plug#end()
