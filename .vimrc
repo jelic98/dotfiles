@@ -81,4 +81,5 @@ call plug#begin()
 	Plug 'linluk/vim-websearch'
 	Plug 'Valloric/YouCompleteMe'
 	Plug 'scrooloose/nerdtree'
+	Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
