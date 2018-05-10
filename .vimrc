@@ -40,23 +40,39 @@ set scrolloff=5
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 set pastetoggle=<F3>
+
+" Map leader key
 let mapleader="/"
-let g:netrw_liststyle=3
-let g:web_search_command = "open"
-let g:web_search_query = "https://www.google.com/search?q="
-map <leader>w :w<Enter>
-nnoremap <NUL> :E<Enter> 
+
+" Easy write, quit and remove highlights
+map <leader>w :w<CR>
+map <leader>q :q<CR>
+map <leader>h :noh<CR>
+
+" Cursor navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-nnoremap <C-T> :NERDTreeToggle<CR>
-nnoremap <C-W> :WebSearchCursor<CR>
-vnoremap <C-W> :WebSearchVisual<CR>
 
+" Tab navigation
+map <leader>t :tabnew<CR>
+map <leader>a :tabprevious<CR>
+map <leader>d :tabnext<CR>
+
+" Directory tree
+let g:netrw_liststyle=3
+nnoremap <C-T> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" Web search
+let g:web_search_command = "open"
+let g:web_search_query = "https://www.google.com/search?q="
+nnoremap <C-W> :WebSearchCursor<CR>
+vnoremap <C-W> :WebSearchVisual<CR>
+
+" Vim-Diff
 function GvrVimDiff()
 	set guifont=Andale_Mono:h8:w4.5 columns=165
 endfun
@@ -69,6 +85,7 @@ if &diff
 	call GvrVimDiff()
 endif
 
+" Vim-Plug
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
 		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
