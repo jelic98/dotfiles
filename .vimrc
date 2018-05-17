@@ -1,10 +1,3 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainer: 
-" 	Lazar Jelic  
-"   jelic.ecloga@gmail.com
-"   http://ecloga.org
-" 	https://github.com/jelic98
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 colorscheme PaperColor
 set t_Co=256
