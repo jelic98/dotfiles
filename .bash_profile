@@ -3,6 +3,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -lpo'
 alias gits='git status && git branch'
+alias gita='git add .'
 alias giti='git rm -r --cached . && git add . && git commit -m "Updated gitignore" && git push'
 export PATH=${PATH}:/usr/local/bin
 export PATH=${PATH}:/usr/local/sbin
