@@ -1,5 +1,6 @@
 syntax on
 colorscheme PaperColor
+set encoding=utf-8
 set t_Co=256
 set background=dark
 set number
