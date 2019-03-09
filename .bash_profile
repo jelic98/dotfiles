@@ -2,6 +2,7 @@ export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -lpo'
+alias ll='ls -la'
 alias gits='git status && git branch'
 alias gita='git add .'
 alias giti='git rm -r --cached . && git add . && git commit -m "Updated gitignore" && git push'
