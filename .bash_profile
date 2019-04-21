@@ -9,6 +9,7 @@ alias giti='git rm -r --cached . && git add . && git commit -m "Updated gitignor
 export PATH=${PATH}:/usr/local/bin
 export PATH=${PATH}:/usr/local/sbin
 export PATH=${PATH}:/usr/local/mysql/bin
+export PATH=${PATH}:/Developer/android-sdk
 export PATH=${PATH}:/Developer/android-sdk/platform-tools
 export PATH=${PATH}:/Developer/android-sdk/emulator
 export PATH=${PATH}:/Developer/android-sdk/tools
