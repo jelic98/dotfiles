@@ -35,99 +35,94 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 set pastetoggle=<F3>
 
+" Reload vimrc on save
 autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 
 " Map leader key
 let mapleader="/"
 
 " Easy write, quit and remove highlights
-map <leader>w :w<cr>
-map <leader>q :q<cr>
-map <leader>h :noh<cr>
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
+nnoremap <leader>n :noh<cr>
 
 " Cursor navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <c-j> <c-w><c-j>
+nnoremap <c-k> <c-w><c-k>
+nnoremap <c-l> <c-w><c-l>
+nnoremap <c-h> <c-w><c-h>
 
 " Tab navigation
 map <leader>t :tabnew<cr>
+map <leader>c :tabclose<cr>
 map <leader>a :tabprevious<cr>
 map <leader>d :tabnext<cr>
 
 " Directory tree
+nnoremap <c-t> :NERDTreeToggle<cr>
 let g:netrw_liststyle=3
-nnoremap <C-T> :NERDTreeToggle<cr>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Web search
-nnoremap <C-W> :WebSearchCursor<cr>
+nnoremap <c-w> :WebSearchCursor<cr>
 
-" Vim-Diff
+" Vim diff
 function GvrVimDiff()
 	set guifont=Andale_Mono:h8:w4.5 columns=165
 endfun
-
 function GvrVimUnDiff()
 	set guifont=Bitstream_Vera_Sans_Mono:h10 columns=80
 endfun
-
 if &diff
 	call GvrVimDiff()
 endif
 
 " Undotree
 nnoremap <F5> :UndotreeToggle<cr>
-
 if has("persistent_undo")
     set undodir=$HOME."/.vim/undos"
     set undofile
 endif
 
-" Whitespace
+" Trimming whitespace
+noremap <leader>e :call TrimWhitespace()<cr>
 function TrimWhitespace()
 	let l:save = winsaveview()
 	try
-		" Remove trailing whitespace
 		keeppatterns %s/\s\+$//g
-		" Replace 4 spaces with tabs
 		keeppatterns %s/ \{4}/\t/g
-		" Remove multiple spaces
 		keeppatterns %s/ \{2,}/ /g
 	catch
 	endtry
 	call winrestview(l:save)
 endfun
 
-noremap <leader>e :call TrimWhitespace()<cr>
-
-" enable cursorline (L) and cmdline help (H)
-let g:quickmenu_options = "LH"
-
-" clear all the items
-call g:quickmenu#reset()
-
-" bind to F12
+" Quick menu
 noremap <silent><F12> :call quickmenu#toggle(0)<cr>
-
-" section 1, text starting with "#" represents a section (see the screen capture below)
+let g:quickmenu_options = "LH"
+call g:quickmenu#reset()
 call g:quickmenu#append('# Develop', '')
-
 call g:quickmenu#append('item 1.1', 'echo "1.1 is selected"', 'select item 1.1')
 call g:quickmenu#append('item 1.2', 'echo "1.2 is selected"', 'select item 1.2')
 call g:quickmenu#append('item 1.3', 'echo "1.3 is selected"', 'select item 1.3')
-
-" section 2
 call g:quickmenu#append('# Misc', '')
-
 call g:quickmenu#append('item 2.1', 'echo "2.1 is selected"', 'select item 2.1')
 call g:quickmenu#append('item 2.2', 'echo "2.2 is selected"', 'select item 2.2')
 call g:quickmenu#append('item 2.3', 'echo "2.3 is selected"', 'select item 2.3')
 call g:quickmenu#append('item 2.4', 'echo "2.4 is selected"', 'select item 2.4')
 
-" Vim-Plug
+" Ultisnips
+let g:SuperTabCrMapping=0
+let g:SuperTabDefaultCompletionType='<C-n>'
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+let g:ycm_key_list_select_completion=['<C-j>', '<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion=['<C-k>', '<C-p>', '<Up>']
+let g:UltiSnipsSnippetDirectories=['~/.vim/UltiSnips', 'UltiSnips']
+
+" Plugin manager
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
 	\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -135,17 +130,17 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-	Plug 'dart-lang/dart-vim-plugin'
-	Plug 'terryma/vim-multiple-cursors'
-	Plug 'linluk/vim-websearch'
-	Plug 'Valloric/YouCompleteMe'
-	Plug 'scrooloose/nerdtree'
-	Plug 'christoomey/vim-tmux-navigator'
 	Plug 'airblade/vim-gitgutter'
+	Plug 'auxiliary/vim-layout'
 	Plug 'chrisbra/vim-commentary'
+	Plug 'christoomey/vim-tmux-navigator'
+	Plug 'dart-lang/dart-vim-plugin'
+	Plug 'linluk/vim-websearch'
+	Plug 'mbbill/undotree'
+	Plug 'scrooloose/nerdtree'
 	Plug 'sirver/ultisnips'
 	Plug 'skywind3000/quickmenu.vim'
-	Plug 'mbbill/undotree'
+	Plug 'terryma/vim-multiple-cursors'
 	Plug 'tpope/vim-surround'
-	Plug 'auxiliary/vim-layout'
+	Plug 'Valloric/YouCompleteMe'
 call plug#end()
