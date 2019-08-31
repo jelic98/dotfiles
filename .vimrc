@@ -33,13 +33,17 @@ set autoread
 set scrolloff=5
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-set pastetoggle=<F3>
+set pastetoggle=<f3>
 
 " Reload vimrc on save
 autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 
 " Map leader key
 let mapleader="/"
+
+" Window resizing
+nnoremap <silent><leader>+ :exe "resize +10"<cr>
+nnoremap <silent><leader>- :exe "resize -10"<cr>
 
 " Easy write, quit and remove highlights
 nnoremap <leader>w :w<cr>
@@ -57,6 +61,15 @@ map <leader>t :tabnew<cr>
 map <leader>c :tabclose<cr>
 map <leader>a :tabprevious<cr>
 map <leader>d :tabnext<cr>
+
+" Flutter commands
+nnoremap <leader>fl :FlutterEmulatorsLaunch<space>
+nnoremap <leader>fe :FlutterEmulators<cr>
+nnoremap <leader>fr :FlutterRun<cr>
+nnoremap <leader>fq :FlutterQuit<cr>
+nnoremap <leader>fs :FlutterSplit<cr>
+nnoremap <f9> :FlutterHotRestart<cr>
+nnoremap <f10> :FlutterHotReload<cr>
 
 " Directory tree
 nnoremap <c-t> :NERDTreeToggle<cr>
@@ -79,7 +92,7 @@ if &diff
 endif
 
 " Undotree
-nnoremap <F5> :UndotreeToggle<cr>
+nnoremap <f5> :UndotreeToggle<cr>
 if has("persistent_undo")
     set undodir=$HOME."/.vim/undos"
     set undofile
@@ -99,7 +112,7 @@ function TrimWhitespace()
 endfun
 
 " Quick menu
-noremap <silent><F12> :call quickmenu#toggle(0)<cr>
+noremap <silent><f12> :call quickmenu#toggle(0)<cr>
 let g:quickmenu_options = "LH"
 call g:quickmenu#reset()
 call g:quickmenu#append('# Develop', '')
@@ -141,6 +154,7 @@ call plug#begin()
 	Plug 'sirver/ultisnips'
 	Plug 'skywind3000/quickmenu.vim'
 	Plug 'terryma/vim-multiple-cursors'
+	Plug 'thosakwe/vim-flutter'
 	Plug 'tpope/vim-surround'
 	Plug 'Valloric/YouCompleteMe'
 call plug#end()
