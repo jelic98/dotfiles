@@ -1,22 +1,3 @@
-" Map leader key
-let mapleader="/"
-
-function TrimWhitespace()
-	let l:save = winsaveview()
-	try
-		" Remove trailing whitespace
-		keeppatterns %s/\s\+$//g
-		" Replace 4 spaces with tabs
-		keeppatterns %s/ \{4}/\t/g
-		" Remove multiple spaces
-		keeppatterns %s/ \{2,}/ /g
-	catch
-	endtry
-	call winrestview(l:save)
-endfun
-
-noremap <leader>e :call TrimWhitespace()<cr>
-
 syntax on
 colorscheme PaperColor
 set encoding=utf-8
@@ -56,6 +37,9 @@ set pastetoggle=<F3>
 
 autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 
+" Map leader key
+let mapleader="/"
+
 " Easy write, quit and remove highlights
 map <leader>w :w<cr>
 map <leader>q :q<cr>
@@ -79,10 +63,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Web search
-let g:web_search_command = "open"
-let g:web_search_query = "https://www.google.com/search?q="
 nnoremap <C-W> :WebSearchCursor<cr>
-vnoremap <C-W> :WebSearchVisual<cr>
 
 " Vim-Diff
 function GvrVimDiff()
@@ -96,6 +77,55 @@ endfun
 if &diff
 	call GvrVimDiff()
 endif
+
+" Undotree
+nnoremap <F5> :UndotreeToggle<cr>
+
+if has("persistent_undo")
+    set undodir=$HOME."/.vim/undos"
+    set undofile
+endif
+
+" Whitespace
+function TrimWhitespace()
+	let l:save = winsaveview()
+	try
+		" Remove trailing whitespace
+		keeppatterns %s/\s\+$//g
+		" Replace 4 spaces with tabs
+		keeppatterns %s/ \{4}/\t/g
+		" Remove multiple spaces
+		keeppatterns %s/ \{2,}/ /g
+	catch
+	endtry
+	call winrestview(l:save)
+endfun
+
+noremap <leader>e :call TrimWhitespace()<cr>
+
+" enable cursorline (L) and cmdline help (H)
+let g:quickmenu_options = "LH"
+
+" clear all the items
+call g:quickmenu#reset()
+
+" bind to F12
+noremap <silent><F12> :call quickmenu#toggle(0)<cr>
+
+" section 1, text starting with "#" represents a section (see the screen capture below)
+call g:quickmenu#append('# Develop', '')
+
+call g:quickmenu#append('item 1.1', 'echo "1.1 is selected"', 'select item 1.1')
+call g:quickmenu#append('item 1.2', 'echo "1.2 is selected"', 'select item 1.2')
+call g:quickmenu#append('item 1.3', 'echo "1.3 is selected"', 'select item 1.3')
+
+" section 2
+call g:quickmenu#append('# Misc', '')
+
+call g:quickmenu#append('item 2.1', 'echo "2.1 is selected"', 'select item 2.1')
+call g:quickmenu#append('item 2.2', 'echo "2.2 is selected"', 'select item 2.2')
+call g:quickmenu#append('item 2.3', 'echo "2.3 is selected"', 'select item 2.3')
+call g:quickmenu#append('item 2.4', 'echo "2.4 is selected"', 'select item 2.4')
 
 " Vim-Plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -114,4 +144,8 @@ call plug#begin()
 	Plug 'airblade/vim-gitgutter'
 	Plug 'chrisbra/vim-commentary'
 	Plug 'sirver/ultisnips'
+	Plug 'skywind3000/quickmenu.vim'
+	Plug 'mbbill/undotree'
+	Plug 'tpope/vim-surround'
+	Plug 'auxiliary/vim-layout'
 call plug#end()
