@@ -135,6 +135,25 @@ let g:ycm_key_list_select_completion=['<C-j>', '<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-k>', '<C-p>', '<Up>']
 let g:UltiSnipsSnippetDirectories=['~/.vim/UltiSnips', 'UltiSnips']
 
+" Clang format
+noremap <leader>f :ClangFormat<cr>
+
+" Prettier
+let g:prettier#autoformat=1
+let g:prettier#exec_cmd_async=0
+let g:prettier#quickfix_enabled=1
+let g:prettier#quickfix_auto_focus=1
+let g:prettier#config#print_width=120
+let g:prettier#config#tab_width=4
+let g:prettier#config#use_tabs='true'
+let g:prettier#config#single_quote='true'
+let g:prettier#config#bracket_spacing='true'
+let g:prettier#config#semi='true'
+let g:prettier#config#jsx_bracket_same_line='false'
+let g:prettier#config#arrow_parens='avoid'
+let g:prettier#config#trailing_comma='none'
+let g:prettier#config#parser='babylon'
+
 " Plugin manager
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -150,6 +169,8 @@ call plug#begin()
 	Plug 'dart-lang/dart-vim-plugin'
 	Plug 'linluk/vim-websearch'
 	Plug 'mbbill/undotree'
+	Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+	Plug 'rhysd/vim-clang-format'
 	Plug 'scrooloose/nerdtree'
 	Plug 'sirver/ultisnips'
 	Plug 'skywind3000/quickmenu.vim'
