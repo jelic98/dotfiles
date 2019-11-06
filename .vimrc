@@ -137,6 +137,7 @@ let g:UltiSnipsSnippetDirectories=['~/.vim/UltiSnips', 'UltiSnips']
 
 " Clang format
 noremap <leader>f :ClangFormat<cr>
+let g:clang_format#detect_style_file = 1
 
 " Prettier
 let g:prettier#autoformat=1
