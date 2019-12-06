@@ -155,6 +155,9 @@ let g:prettier#config#arrow_parens='avoid'
 let g:prettier#config#trailing_comma='none'
 let g:prettier#config#parser='babylon'
 
+" GLSL syntax highlight
+au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl 
+
 " Plugin manager
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
