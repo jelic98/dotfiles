@@ -15,5 +15,5 @@ export PATH=${PATH}:/Developer/android-sdk/platform-tools
 export PATH=${PATH}:/Developer/android-sdk/emulator
 export PATH=${PATH}:/Developer/android-sdk/tools
 export PATH=${PATH}:/Developer/Flutter/bin
-export PATH=${PATH}:∼/.composer/vendor/bin
+export PATH=${PATH}:/Users/Lazar/.composer/vendor/bin
 source ~/.git-completion.bash
