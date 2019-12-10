@@ -11,6 +11,7 @@ alias gitm='git push && git checkout master && git merge develop && git push && 
 export PATH=${PATH}:/usr/local/bin
 export PATH=${PATH}:/usr/local/sbin
 export PATH=${PATH}:/usr/local/mysql/bin
+export PATH=${PATH}:/usr/local/Cellar/rabbitmq/3.8.2/sbin
 export PATH=${PATH}:/Developer/android-sdk
 export PATH=${PATH}:/Developer/android-sdk/platform-tools
 export PATH=${PATH}:/Developer/android-sdk/emulator
