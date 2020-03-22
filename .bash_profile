@@ -12,10 +12,11 @@ export PATH=${PATH}:/usr/local/bin
 export PATH=${PATH}:/usr/local/sbin
 export PATH=${PATH}:/usr/local/mysql/bin
 export PATH=${PATH}:/usr/local/Cellar/rabbitmq/3.8.2/sbin
-export PATH=${PATH}:/Developer/android-sdk
-export PATH=${PATH}:/Developer/android-sdk/platform-tools
-export PATH=${PATH}:/Developer/android-sdk/emulator
-export PATH=${PATH}:/Developer/android-sdk/tools
-export PATH=${PATH}:/Developer/Flutter/bin
+export PATH=${PATH}:/Library/Developer/android-sdk
+export PATH=${PATH}:/Library/Developer/android-sdk/platform-tools
+export PATH=${PATH}:/Library/Developer/android-sdk/emulator
+export PATH=${PATH}:/Library/Developer/android-sdk/tools
+export PATH=${PATH}:/Library/Developer/Flutter/bin
 export PATH=${PATH}:/Users/Lazar/.composer/vendor/bin
+export BASH_SILENCE_DEPRECATION_WARNING=1
 source ~/.git-completion.bash

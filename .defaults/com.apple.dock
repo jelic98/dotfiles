@@ -1,0 +1,25 @@
+{
+	autohide = 1;
+	largesize = 68;
+	loc = "en_GB:RS";
+	magnification = 1;
+	mineffect = genie;
+    region = RS;
+    showAppExposeGestureEnabled = 1;
+    tilesize = 56;
+    version = 1;
+	"expose-group-apps" = 0;
+	"last-messagetrace-stamp" = "606403046.495134";
+	"minimize-to-application" = 1;
+	"mod-count" = 574;
+    "show-recents" = 0;
+    "trash-full" = 0;
+    "wvous-bl-corner" = 0;
+    "wvous-bl-modifier" = 0;
+    "wvous-br-corner" = 0;
+    "wvous-br-modifier" = 0;
+    "wvous-tl-corner" = 0;
+    "wvous-tl-modifier" = 0;
+    "wvous-tr-corner" = 0;
+    "wvous-tr-modifier" = 0;
+}

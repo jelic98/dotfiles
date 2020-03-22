@@ -1,0 +1,52 @@
+{
+    "Default Window Settings" = Pro;
+    DefaultProfilesVersion = 1;
+    HasMigratedDefaults = 1;
+    "Man Page Window Settings" = "Man Page";
+    NSColorPanelMode = 6;
+    NSFontPanelAttributes = "1, 1";
+    NSNavLastRootDirectory = "~";
+    NSNavPanelExpandedSizeForOpenMode = "{712, 448}";
+    NSNavPanelExpandedSizeForSaveMode = "{712, 521}";
+    "NSToolbar Configuration com.apple.NSColorPanel" =     {
+        "TB Is Shown" = 1;
+    };
+    "NSWindow Frame NSColorPanel" = "457 213 255 357 0 0 1440 877 ";
+    "NSWindow Frame NSFontPanel" = "929 37 445 77 0 0 1440 877 ";
+    "NSWindow Frame TTAppPreferences" = "421 218 667 533 0 0 1440 900 ";
+    "NSWindow Frame TTWindow" = "0 5 1434 895 0 0 1440 900 ";
+    "NSWindow Frame TTWindow Pro" = "268 93 810 530 0 0 1440 900 ";
+    PMPrintingExpandedStateForPrint2 = 0;
+    ProfileCurrentVersion = "2.07";
+    SecureKeyboardEntry = 0;
+    ShowTabBar = 0;
+    ShowTabBarInFullScreen = 0;
+    "Startup Window Settings" = Pro;
+    "TTAppPreferences Selected Tab" = 1;
+    "Window Settings" =     {
+        Pro =         {
+            BackgroundBlur = "0.2514450867052023";
+            BackgroundColor = {length = 254, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 000000c5 };
+            BackgroundSettingsForInactiveWindows = 0;
+            CursorColor = {length = 246, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 000000bd };
+            CursorType = 0;
+            DisableANSIColor = 0;
+            Font = {length = 263, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 000000cb };
+            FontAntialias = 1;
+            FontWidthSpacing = "0.9959677419354839";
+            ProfileCurrentVersion = "2.07";
+            SelectionColor = {length = 246, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 000000bd };
+            ShouldLimitScrollback = 0;
+            ShowWindowSettingsNameInTitle = 0;
+            TextBoldColor = {length = 237, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 000000b4 };
+            TextColor = {length = 246, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 000000bd };
+            UseBrightBold = 1;
+            columnCount = 100;
+            fontAllowsDisableAntialias = 1;
+            name = Pro;
+            rowCount = 30;
+            shellExitAction = 0;
+            type = "Window Settings";
+        };
+    };
+}
