@@ -26,7 +26,8 @@ set lazyredraw
 set wildmenu
 set ruler
 set showmode
-set colorcolumn=120
+set textwidth=80 
+set colorcolumn=80
 set hlsearch
 set ttyfast
 set autoread
