@@ -1,7 +1,6 @@
-syntax on
 colorscheme PaperColor
 set encoding=utf-8
-set t_Co=256
+set t_Co=256Done!
 set background=dark
 set number
 set laststatus=2
@@ -159,6 +158,16 @@ let g:prettier#config#parser='babylon'
 " GLSL syntax highlight
 au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl 
 
+" Pathogen
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+" Latex live preview
+noremap <leader>l :LLPStartPreview<cr>
+autocmd Filetype tex setl updatetime=1000
+let g:livepreview_previewer = 'open -a Preview'
+
 " Plugin manager
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -183,4 +192,5 @@ call plug#begin()
 	Plug 'thosakwe/vim-flutter'
 	Plug 'tpope/vim-surround'
 	Plug 'Valloric/YouCompleteMe'
+	Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()
