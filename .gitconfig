@@ -3,6 +3,7 @@
 	username = jelic98
 	email = lazarjelic98@gmail.com
 [core]
+	filemode = false
 	editor = vim
 	tabwidth = 4
 	whitespace = trailing-space,space-before-tab,indent-with-non-tab,cr-at-eol
