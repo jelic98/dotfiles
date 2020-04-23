@@ -1,7 +1,6 @@
-colorscheme PaperColor
+syntax on
+colorscheme tluafed
 set encoding=utf-8
-set t_Co=256Done!
-set background=dark
 set number
 set laststatus=2
 set tabstop=4
@@ -163,11 +162,14 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-" Latex live preview
+" Tex live preview
 noremap <leader>l :LLPStartPreview<cr>
 autocmd Filetype tex setl updatetime=1000
 let g:livepreview_previewer='open -a Preview'
 let g:tex_no_error=1
+
+" GitGutter
+let g:gitgutter_enabled=1
 
 " Plugin manager
 if empty(glob('~/.vim/autoload/plug.vim'))
