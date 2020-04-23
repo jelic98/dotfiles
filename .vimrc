@@ -166,7 +166,8 @@ filetype plugin indent on
 " Latex live preview
 noremap <leader>l :LLPStartPreview<cr>
 autocmd Filetype tex setl updatetime=1000
-let g:livepreview_previewer = 'open -a Preview'
+let g:livepreview_previewer='open -a Preview'
+let g:tex_no_error=1
 
 " Plugin manager
 if empty(glob('~/.vim/autoload/plug.vim'))
