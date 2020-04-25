@@ -48,18 +48,10 @@ let s:colors.base6  = { 'cterm': 6 }	" dark cyan
 let s:colors.base7  = { 'cterm': 7 }	" dark white
 " let s:colors.base7  = { 'cterm': 15 }	" light white
 
-call s:Col('Conceal', 'base7')
-call s:Col('Directory', 'base7')
-call s:Col('FoldColumn', 'base7')
-call s:Col('Ignore', 'base7')
-call s:Col('Label', 'base7')
-call s:Col('Question', 'base7')
-call s:Col('SignColumn', 'base7')
-call s:Col('Statement', 'base7')
-call s:Col('Syntax', 'base7')
-call s:Col('Title', 'base7')
-call s:Col('Underlined', 'base7')
-call s:Col('WildMenu', 'base7')
+call s:Col('Syntax', 'base4')
+call s:Col('Title', 'base4')
+call s:Col('Underlined', 'base4')
+call s:Col('WildMenu', 'base4')
 
 call s:Col('ColorColumn', '', 'base1')
 call s:Col('MatchParen', 'base1')
@@ -103,6 +95,7 @@ call s:Col('Type', 'base2')
 call s:Col('Typedef', 'base5')
 call s:Col('Function', 'base2')
 call s:Col('Identifier', 'base2')
+call s:Col('Statement', 'base2')
 
 call s:Col('Comment', 'base6')
 call s:Col('Todo', 'base6', 'base0')

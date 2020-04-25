@@ -14,16 +14,12 @@
 " https://github.com/octol/vim-cpp-enhanced-highlight
 " ==============================================================================
 
-if !get(g:, 'cpp_no_function_highlight', 0)
-    syn match cUserFunction "\<\h\w*\>\(\s\|\n\)*("me=e-1 contains=cParen,cCppParen
-    hi def link cUserFunction Function
-endif
+syn match cUserFunction "\<\h\w*\>\(\s\|\n\)*("me=e-1 contains=cParen
+hi def link cUserFunction Function
 
-if get(g:, 'cpp_simple_highlight', 0)
-    hi link cStorageClass Statement
-    hi link cStructure Statement
-    hi link cLabel Statement
-endif
+hi link cStorageClass Statement
+hi link cStructure Statement
+hi link cLabel Statement
 
 syn match cOperator "\(<<\|>>\|[-+*/%&^|<>!=]\)="
 syn match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
