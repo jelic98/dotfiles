@@ -98,7 +98,7 @@ call s:Col('Identifier', 'base2')
 call s:Col('Statement', 'base2')
 
 call s:Col('Comment', 'base6')
-call s:Col('Todo', 'base6', 'base0')
+call s:Col('Todo', 'base0', 'base6')
 
 call s:Col('cBadBlock', 'base1', 'base7')
 call s:Col('cBitField', 'base7')
@@ -148,7 +148,7 @@ call s:Col('StatusLineTerm', 'base0', 'base7')
 call s:Col('StatusLineTermNC', 'base0', 'base7')
 
 call s:Col('SyntasticErrorLine', 'base7', 'base1')
-call s:Col('SyntasticWarningLine', 'base7', 'base3')
+call s:Col('SyntasticWarningLine', 'base3')
 
 call s:Col('TabLine', 'base0', 'base7')
 call s:Col('TabLineFill', '', 'base7')
