@@ -162,11 +162,12 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-" Tex live preview
+" Latex live preview
 noremap <leader>l :LLPStartPreview<cr>
 autocmd Filetype tex setl updatetime=1000
 let g:livepreview_previewer='open -a Preview'
-let g:tex_no_error=1
+let g:livepreview_engine='pdflatex'
+let g:livepreview_cursorhold_recompile=0
 
 " GitGutter
 let g:gitgutter_enabled=1
