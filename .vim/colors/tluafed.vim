@@ -39,8 +39,8 @@ let s:colors.base2  = { 'cterm': 2 }	" dark green
 " let s:colors.base2  = { 'cterm': 10 }	" light green
 let s:colors.base3  = { 'cterm': 3 }	" dark yellow
 " let s:colors.base3  = { 'cterm': 11 }	" light yellow
-" let s:colors.base4  = { 'cterm': 4 }	" dark blue
-let s:colors.base4  = { 'cterm': 12 }	" light blue
+let s:colors.base4  = { 'cterm': 4 }	" dark blue
+"let s:colors.base4  = { 'cterm': 12 }	" light blue
 let s:colors.base5  = { 'cterm': 5 }	" dark purple
 " let s:colors.base5  = { 'cterm': 13 }	" light purple
 let s:colors.base6  = { 'cterm': 6 }	" dark cyan
@@ -91,7 +91,7 @@ call s:Col('Constant', 'base3')
 
 call s:Col('LineNr', 'base6')
 call s:Col('Macro', 'base5')
-call s:Col('Type', 'base2')
+call s:Col('Type', 'base4')
 call s:Col('Typedef', 'base5')
 call s:Col('Function', 'base2')
 call s:Col('Identifier', 'base2')
