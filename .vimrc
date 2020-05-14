@@ -134,6 +134,9 @@ let g:ycm_key_list_select_completion=['<C-j>', '<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-k>', '<C-p>', '<Up>']
 let g:UltiSnipsSnippetDirectories=['~/.vim/UltiSnips', 'UltiSnips']
 
+" Manual indent
+noremap <leader>i gg=G<cr>
+
 " Clang format
 noremap <leader>f :ClangFormat<cr>
 let g:clang_format#detect_style_file = 1
