@@ -141,6 +141,9 @@ noremap <leader>i gg=G<cr>
 noremap <leader>f :ClangFormat<cr>
 let g:clang_format#detect_style_file = 1
 
+" YAPF
+noremap <leader>y :YAPF<cr>
+
 " GLSL syntax highlight
 au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl 
 
