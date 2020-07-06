@@ -141,22 +141,6 @@ noremap <leader>i gg=G<cr>
 noremap <leader>f :ClangFormat<cr>
 let g:clang_format#detect_style_file = 1
 
-" Prettier
-let g:prettier#autoformat=1
-let g:prettier#exec_cmd_async=0
-let g:prettier#quickfix_enabled=1
-let g:prettier#quickfix_auto_focus=1
-let g:prettier#config#print_width=120
-let g:prettier#config#tab_width=4
-let g:prettier#config#use_tabs='true'
-let g:prettier#config#single_quote='true'
-let g:prettier#config#bracket_spacing='true'
-let g:prettier#config#semi='true'
-let g:prettier#config#jsx_bracket_same_line='false'
-let g:prettier#config#arrow_parens='avoid'
-let g:prettier#config#trailing_comma='none'
-let g:prettier#config#parser='babylon'
-
 " GLSL syntax highlight
 au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl 
 
@@ -188,9 +172,9 @@ call plug#begin()
 	Plug 'chrisbra/vim-commentary'
 	Plug 'christoomey/vim-tmux-navigator'
 	Plug 'dart-lang/dart-vim-plugin'
+	Plug 'google/yapf'
 	Plug 'linluk/vim-websearch'
 	Plug 'mbbill/undotree'
-	Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 	Plug 'rhysd/vim-clang-format'
 	Plug 'scrooloose/nerdtree'
 	Plug 'sirver/ultisnips'
