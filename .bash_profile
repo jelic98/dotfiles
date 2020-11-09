@@ -12,6 +12,7 @@ export PATH=${PATH}:/usr/local/bin
 export PATH=${PATH}:/usr/local/sbin
 export PATH=${PATH}:/usr/local/mysql/bin
 export PATH=${PATH}:/usr/local/Cellar/rabbitmq/3.8.2/sbin
+export PATH=${PATH}:/usr/local/Cellar/mongodb-community-shell/4.2.0/bin
 export PATH=${PATH}:/Library/Developer/android-sdk
 export PATH=${PATH}:/Library/Developer/android-sdk/platform-tools
 export PATH=${PATH}:/Library/Developer/android-sdk/emulator
