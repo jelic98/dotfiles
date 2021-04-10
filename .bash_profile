@@ -20,6 +20,6 @@ export PATH=${PATH}:/Library/Developer/android-sdk/tools
 export PATH=${PATH}:/Library/Developer/Flutter/bin
 export PATH=${PATH}:/Users/Lazar/.composer/vendor/bin
 export PATH=${PATH}:/Library/TeX/texbin
-export PATH=${PATH}:/opt/apache-maven-3.8.1/bin
+export PATH=${PATH}:/usr/local/Cellar/maven/3.6.3/libexec
 export BASH_SILENCE_DEPRECATION_WARNING=1
 source ~/.git-completion.bash
