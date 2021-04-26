@@ -32,7 +32,7 @@ set autoread
 set scrolloff=5
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-set pastetoggle=<f3>
+set pastetoggle=<leader>p
 
 " Reload vimrc on save
 autocmd! bufwritepost $MYVIMRC source $MYVIMRC
