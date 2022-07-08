@@ -11,6 +11,8 @@ alias gitm='git push && git checkout master && git merge develop && git push && 
 export PATH=${PATH}:/usr/local/bin
 export PATH=${PATH}:/usr/local/sbin
 export PATH=${PATH}:/usr/local/mysql/bin
+export PATH=${PATH}:/usr/local/opt/ruby/bin
+export PATH=${PATH}:/Users/Lazar/.gem/ruby/2.6.0/bin
 export PATH=${PATH}:/usr/local/Cellar/rabbitmq/3.8.2/sbin
 export PATH=${PATH}:/usr/local/Cellar/mongodb-community-shell/4.2.0/bin
 export PATH=${PATH}:/Library/Developer/android-sdk
@@ -21,5 +23,6 @@ export PATH=${PATH}:/Library/Developer/Flutter/bin
 export PATH=${PATH}:/Users/Lazar/.composer/vendor/bin
 export PATH=${PATH}:/Library/TeX/texbin
 export PATH=${PATH}:/usr/local/Cellar/maven/3.6.3/libexec
+export SDKROOT=$(xcrun --show-sdk-path)
 export BASH_SILENCE_DEPRECATION_WARNING=1
 source ~/.git-completion.bash
