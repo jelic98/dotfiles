@@ -1,5 +1,5 @@
 [user]
-	name = Lazar Jelic
+	name = Lazar Jelić
 	username = jelic98
 	email = lazarjelic98@gmail.com
 [core]
@@ -8,6 +8,7 @@
 	tabwidth = 4
 	whitespace = trailing-space,space-before-tab,indent-with-non-tab,cr-at-eol
 	excludesfile = ~/.gitignore
+	autocrlf = input
 [diff]
 	tool = vimdiff
 [mergetool]
