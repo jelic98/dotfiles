@@ -142,7 +142,7 @@ noremap <leader>f :ClangFormat<cr>
 let g:clang_format#detect_style_file = 1
 
 " YAPF
-noremap <leader>y :YAPF<cr>
+noremap <leader>y :Yapf<cr>
 
 " GLSL syntax highlight
 au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl 
@@ -175,7 +175,7 @@ call plug#begin()
 	Plug 'chrisbra/vim-commentary'
 	Plug 'christoomey/vim-tmux-navigator'
 	Plug 'dart-lang/dart-vim-plugin'
-	Plug 'google/yapf'
+	Plug 'mindriot101/vim-yapf'
 	Plug 'linluk/vim-websearch'
 	Plug 'mbbill/undotree'
 	Plug 'rhysd/vim-clang-format'
